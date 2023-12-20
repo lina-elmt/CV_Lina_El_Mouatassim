@@ -9,9 +9,9 @@ data <- openxlsx::read.xlsx("data_cv_shiny.xlsx")%>%
 
 mute <- function(x){ifelse(grepl("NA",x)|is.na(x), "", x)}
 
-values_ref <- reactiveVal(c(""))
-
 function(input, output, session) {
+
+values_ref <- reactiveVal(c(""))
 
   output$cv_pdf <- downloadHandler(
 
