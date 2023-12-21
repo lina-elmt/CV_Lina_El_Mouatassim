@@ -3,15 +3,17 @@ library(dplyr)
 library(openxlsx)
 library(janitor)
 
+
 data <- openxlsx::read.xlsx("data_cv_shiny.xlsx")%>%
   dplyr::mutate(date = as.Date(date, origin = "1899-12-30"))%>%
   dplyr::mutate(display_date = format(date, "%B %Y"))
 
 mute <- function(x){ifelse(grepl("NA",x)|is.na(x), "", x)}
 
-function(input, output, session) {
+Sys.setlocale("LC_ALL",'fr_FR.UTF-8')
 
-Sys.setenv(LANG = "fr")
+
+function(input, output, session) {
 
 values_ref <- reactiveVal(c(""))
 

@@ -5,6 +5,6 @@ account: lina-elmt
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 10833119
-bundleId: 8071218
+bundleId: 8071264
 url: https://lina-elmt.shinyapps.io/cv_lina_el_mouatassim/
 version: 1
