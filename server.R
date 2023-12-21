@@ -3,15 +3,28 @@ library(dplyr)
 library(openxlsx)
 library(janitor)
 
+to_french <- function(x){
+  gsub("january","janvier",
+  gsub("february", "février",
+  gsub("march", "mars",
+  gsub("april", "avril", 
+  gsub("may","mai",
+  gsub("june", "juin",
+  gsub("july", "juillet",
+  gsub("august", "août",
+  gsub("september", "septembre",
+  gsub("october", "octobre",
+  gsub("november", "novembre", 
+  gsub("december", "décembre",
+  x)))))))))))
+  )
+}
 
 data <- openxlsx::read.xlsx("data_cv_shiny.xlsx")%>%
   dplyr::mutate(date = as.Date(date, origin = "1899-12-30"))%>%
-  dplyr::mutate(display_date = format(date, "%B %Y"))
+  dplyr::mutate(display_date = to_french(format(date, "%B %Y")))
 
 mute <- function(x){ifelse(grepl("NA",x)|is.na(x), "", x)}
-
-Sys.setlocale("LC_ALL",'fr_FR.UTF-8')
-
 
 function(input, output, session) {
 
@@ -30,8 +43,8 @@ values_ref <- reactiveVal(c(""))
     sliderTextInput(
       "slider",
       "",
-      choices = format(data$date%>%unique()%>%sort(), "%B %Y"),
-      selected = format(max(data$date), "%B %Y"),
+      choices = to_french(format(data$date%>%unique()%>%sort(), "%B %Y")),
+      selected = to_french(format(max(data$date), "%B %Y")),
       grid = FALSE,
       width = "90%"
     )
