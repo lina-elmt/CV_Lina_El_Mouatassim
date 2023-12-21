@@ -4,18 +4,18 @@ library(openxlsx)
 library(janitor)
 
 to_french <- function(x){
-  gsub("january","janvier",
-  gsub("february", "février",
-  gsub("march", "mars",
-  gsub("april", "avril", 
-  gsub("may","mai",
-  gsub("june", "juin",
-  gsub("july", "juillet",
-  gsub("august", "août",
-  gsub("september", "septembre",
-  gsub("october", "octobre",
-  gsub("november", "novembre", 
-  gsub("december", "décembre",
+  gsub("January","Janvier",
+  gsub("February", "Février",
+  gsub("March", "Mars",
+  gsub("April", "Avril", 
+  gsub("May","Mai",
+  gsub("June", "Juin",
+  gsub("July", "Juillet",
+  gsub("August", "Août",
+  gsub("September", "Septembre",
+  gsub("October", "Octobre",
+  gsub("November", "Novembre", 
+  gsub("December", "Décembre",
   x)))))))))))
   )
 }
@@ -23,6 +23,8 @@ to_french <- function(x){
 data <- openxlsx::read.xlsx("data_cv_shiny.xlsx")%>%
   dplyr::mutate(date = as.Date(date, origin = "1899-12-30"))%>%
   dplyr::mutate(display_date = to_french(format(date, "%B %Y")))
+
+  print(data$display_date)
 
 mute <- function(x){ifelse(grepl("NA",x)|is.na(x), "", x)}
 
