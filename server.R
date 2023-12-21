@@ -11,6 +11,8 @@ mute <- function(x){ifelse(grepl("NA",x)|is.na(x), "", x)}
 
 function(input, output, session) {
 
+Sys.setenv(LANG = "fr")
+
 values_ref <- reactiveVal(c(""))
 
   output$cv_pdf <- downloadHandler(
