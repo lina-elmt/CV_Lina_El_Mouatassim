@@ -22,8 +22,8 @@ dashboardPage(
     img(src='photo.jpg', width="80%"),
     HTML(
       "<br><h3 style='color:white;font-weight:bold'>Lina <br>EL MOUATASSIM</h2><br>
-      <h4 style='color:white;'>Data scientist</h4>
-      <h4 style='color:white;'>Développeur R Shiny</h4>
+      <h4 style='color:white;'>Data Scientist</h4>
+      <h4 style='color:white;'>Data Analyst</h4>
       <h4 style='color:white;'>Responsable innovation</h4><br>
       Ma mission est de transformer les données en solutions exploitables pour orienter la prise de décision stratégique et permettre un avantage compétitif.
       <br><br>
