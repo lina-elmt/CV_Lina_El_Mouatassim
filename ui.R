@@ -22,13 +22,11 @@ dashboardPage(
     img(src='photo.jpg', width="80%"),
     HTML(
       "<br><h3 style='color:white;font-weight:bold'>Lina <br>EL MOUATASSIM</h2><br>
-      <h4 style='color:white;'>Data Scientist</h4>
-      <h4 style='color:white;'>Data Analyst</h4>
-      <h4 style='color:white;'>Responsable innovation</h4><br>
-      Ma mission est de transformer les données en solutions exploitables pour orienter la prise de décision stratégique et permettre un avantage compétitif.
+      <h4 style='color:white;'>Consultante Data, IA et Business Intelligence</h4>
+      Data Scientist forte de 4 ans d'expérience en Business Intelligence, gestion de projets innovants, data et machine learning, je me charge de vous proposer une stratégie d'innovation clé en main.
       <br><br>
       <i>
-      lina.el-mouatassim@hotmail.fr<br>
+      lina.larbicherif@larche-it.fr<br>
       07 80 84 48 23<br>
       69100 Villeurbanne
       </i>
